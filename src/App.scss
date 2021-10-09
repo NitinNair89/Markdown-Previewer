@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+$bg: #e3f2fd;
+$box-bg: #bbdefb;
+$font: "Share Tech Mono", monospace;
+
+#app * {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 2em;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: $font;
+  line-height: 1.6;
+  background-color: $bg;
+}
+
+// Scrollbars - http://blog.0100.tv/2012/11/webkit-scrollbars-on-os-x/
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#section__intro {
+  text-align: center;
+  color: #424242;
+  margin-bottom: 20px;
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 10px 0;
+    padding: 0;
+
+    li {
+      margin: 0 5px;
+    }
+  }
+}
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: $box-bg;
+
+  .box {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  code,
+  pre {
+    font-size: 14px;
+    background-color: #eceff1;
+    border: 1px solid #eceff1;
+    padding: 5px;
+  }
+}
+#editorWrapper,
+#preview {
+  height: 400px;
+}
+#editor {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+#preview {
+  overflow-y: scroll;
+  max-height: 500px;
+
+  img {
+    height: 150px;
+    width: 300px;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+
+    th {
+      background-color: lightgray;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  }
+}
+footer {
+  text-align: center;
+  margin: 10px 0;
+}
+@media screen and (min-width: 769px) {
+  #app .box {
+    width: 46%;
+  }
+}

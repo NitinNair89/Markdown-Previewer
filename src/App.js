@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import "./App.scss";
+import MDEditor from "./components/MDEditor";
+import MDPreview from "./components/MDPreview";
+import INITIAL_STATE from "./placeholder";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: INITIAL_STATE,
+    };
+  }
+
+  fnHandleOnChange = (evt) => {
+    this.setState({
+      value: evt.target.value
+    });
+  };
+
+  render() {
+    return (
+      <main>
+        <section id="app">
+          <div className="box">
+            <MDEditor
+              onInput={this.fnHandleOnChange.bind(this)}
+              value={this.state.value}
+            />
+          </div>
+          <div className="box">
+            <MDPreview value={this.state.value} />
+          </div>
+        </section>
+      </main>
+    );
+  }
 }
 
 export default App;
