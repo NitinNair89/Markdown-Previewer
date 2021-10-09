@@ -5,6 +5,8 @@ This project is done as a solution to a coding challenge by FreeCodeCamp - https
 
 Codepen Link: https://codepen.io/Nitin-Chandran-Nair/full/QWMWbGN
 
+Markdown cheat-sheet: https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+
 ### User Stories
 - User Story #1: I can see a textarea element with a corresponding id="editor".
 - User Story #2: I can see an element with a corresponding id="preview".
