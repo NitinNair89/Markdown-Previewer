@@ -16,6 +16,7 @@ Codepen Link: https://codepen.io/Nitin-Chandran-Nair/full/QWMWbGN
 
 ### Testing
 FCC has created a set of test cases to validate the user stories. Their script can be directly imported: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
+
 ---
 # Getting Started with Create React App
 
